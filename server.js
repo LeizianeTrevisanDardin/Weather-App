@@ -43,7 +43,7 @@ app.get("/api/weather", async (req, res) => {
   try{
     //encodeURIComponents avoids bugs in locating the city for instance
     //units=metrics -> Celsius
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(city)}, ${encodeURIComponent(country)}&units=metric&appid=${keu}`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(city)}, ${encodeURIComponent(country)}&units=metric&appid=${key}`;
 
     //creating the Fetch with URL
     const r = await fetch(url); //calls the real API
